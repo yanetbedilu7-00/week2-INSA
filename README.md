@@ -1,6 +1,6 @@
 NETWORKING
 📘 1. What is Networking?
-Networking is the connection of two or more computers/devices to share data, resources, and communication.
+Networking is the connection of two or more computers/devices to share data, resources, and communication. 
 🔹 Examples
 Sharing files between computers
 Internet access
