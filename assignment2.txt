@@ -1,0 +1,156 @@
+1. HTTP (Port 80)
+Purpose: Transfer web pages (non-encrypted).
+Attacks:
+MITM (Man-in-the-Middle): Attacker intercepts HTTP traffic since it is unencrypted.
+XSS (Cross-Site Scripting): Injects malicious scripts into web pages viewed by others.
+SQL Injection: Manipulates database queries through input fields.
+Session Hijacking: Steal session cookies to impersonate users.
+2. HTTPS (Port 443)
+Purpose: Secure web page transfer using TLS/SSL.
+Attacks:
+SSL Stripping: Downgrades HTTPS to HTTP to intercept traffic.
+Certificate Spoofing: Use fake certificates to appear legitimate.
+3. FTP (Port 21)
+Purpose: File transfer.
+Attacks:
+Plaintext sniffing: Credentials are sent unencrypted in standard FTP.
+Brute-force login: Repeated login attempts to guess passwords.
+Directory traversal: Access files outside the permitted directories.
+4. SFTP (Port 22)
+Purpose: Secure file transfer over SSH.
+Attacks:
+Weak password brute-force if accounts have weak passwords.
+Misconfiguration exploits like allowing root login.
+5. SSH (Port 22)
+Purpose: Secure remote login.
+Attacks:
+Brute-force attacks to guess credentials.
+Key compromise if private keys are leaked.
+MITM attacks if the server key is replaced.
+6. Telnet (Port 23)
+Purpose: Remote login (unencrypted).
+Attacks:
+Eavesdropping: Credentials are transmitted in plaintext.
+Credential theft: Attackers can capture passwords easily.
+7. SMTP (Port 25)
+Purpose: Email sending.
+Attacks:
+Spam: Sending unsolicited emails.
+Email spoofing: Faking the sender address.
+Phishing: Sending malicious links or requests.
+8. POP3 (Port 110)
+Purpose: Email retrieval.
+Attacks:
+Password sniffing: POP3 is often unencrypted.
+MITM attacks: Intercepting login credentials.
+9. IMAP (Port 143)
+Purpose: Email retrieval with better folder management.
+Attacks:
+MITM attacks: Intercept credentials if not using IMAPS.
+Brute-force attacks: Guessing account passwords.
+10. DNS (Port 53)
+Purpose: Translate domain names to IP addresses.
+Attacks:
+DNS spoofing/poisoning: Redirects users to malicious sites.
+DDoS amplification: Use DNS servers to flood victims.
+11. DHCP (Ports 67/68)
+Purpose: Assign IP addresses automatically.
+Attacks:
+Rogue DHCP server: Provides malicious IPs or gateways.
+DHCP starvation: Exhausts IP pool to deny service.
+12. SNMP (Port 161)
+Purpose: Network management.
+Attacks:
+Unauthorized access: Weak community strings allow full network access.
+Information leakage: Sensitive network details can be exposed.
+13. NTP (Port 123)
+Purpose: Time synchronization.
+Attacks:
+DDoS amplification: Use NTP to flood targets.
+MITM / Time spoofing: Tamper with system clocks for attacks.
+14. ICMP (No port)
+Purpose: Network diagnostics (ping, traceroute).
+Attacks:
+Ping flood: Overwhelms target with ICMP requests.
+ICMP redirect attack: Redirect traffic to malicious nodes.
+15. TCP (No fixed port)
+Purpose: Reliable end-to-end transport.
+Attacks:
+SYN flood: Overwhelm server with TCP connection requests.
+Session hijacking: Take over an active connection.
+TCP reset attacks: Forcefully close connections.
+16. UDP (No fixed port)
+Purpose: Fast, connectionless transport.
+Attacks:
+UDP flood: Send huge amounts of UDP packets to overwhelm target.
+Amplification attacks: Exploit servers to magnify traffic toward victims.
+17. IP (No port)
+Purpose: Routing data packets.
+Attacks:
+IP spoofing: Faking IP addresses to bypass filters or impersonate.
+Fragmentation attacks: Exploit packet reassembly to crash systems.
+18. ARP (No port)
+Purpose: Map IP addresses to MAC addresses on LAN.
+Attacks:
+ARP spoofing/poisoning: Redirect traffic to attacker (MITM).
+19. HTTP/2 (Port 443)
+Purpose: Faster secure web protocol.
+Attacks:
+HPACK attacks: Exploit header compression to leak information.
+DoS attacks: Flood servers with requests.
+20. SIP (Port 5060)
+Purpose: Voice over IP signaling.
+Attacks:
+Call hijacking: Redirect or intercept calls.
+SIP flood: Overwhelm VoIP servers with fake requests.
+21. RTP (Dynamic ports)
+Purpose: Transmit voice/video streams.
+Attacks:
+Packet sniffing: Capture voice or video streams.
+Call interception: Inject fake audio/video data.
+22. RTCP (Dynamic ports)
+Purpose: Monitor RTP streams.
+Attacks:
+Data leakage: Exposes session statistics.
+Spoofing: Manipulate stream monitoring info.
+23. MQTT (Port 1883)
+Purpose: Messaging protocol for IoT.
+Attacks:
+Unauthorized access: Weak authentication.
+Message injection: Send fake IoT commands.
+24. CoAP (Port 5683)
+Purpose: Lightweight IoT protocol.
+Attacks:
+MITM attacks: Intercept messages if unencrypted.
+Replay attacks: Resend old commands to IoT devices.
+25. LDAP (Port 389)
+Purpose: Directory services (user info, authentication).
+Attacks:
+LDAP injection: Exploit unsanitized queries.
+Unauthorized enumeration: Extract user details.
+26. RDP (Port 3389)
+Purpose: Remote desktop access.
+Attacks:
+Brute-force login: Guess credentials to gain access.
+Session hijacking: Take over active RDP sessions.
+MITM attacks: Intercept remote desktop traffic.
+27. SMB (Port 445)
+Purpose: File sharing.
+Attacks:
+SMB relay attacks: Forward credentials to another machine.
+EternalBlue exploit: Malware spreads via SMB vulnerabilities.
+28. NFS (Port 2049)
+Purpose: Network file system.
+Attacks:
+Unauthorized access: Access files without permission.
+Data leakage: Sensitive data can be exposed over the network.
+29. SNTP (Port 123)
+Purpose: Lightweight time sync.
+Attacks:
+Time spoofing: Manipulate clocks to affect authentication or logs.
+Amplification attacks: Used in DDoS.
+30. BGP (Port 179)
+Purpose: Internet routing between ISPs.
+Attacks:
+BGP hijacking: Redirect internet traffic to malicious networks.
+Route injection: Inject fake routes to disrupt connectivity.

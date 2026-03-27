@@ -1,0 +1,22 @@
+1. What are Public and Private IP Addresses?
+Public IP:
+Globally unique, assigned by your ISP.
+Can be accessed over the internet.
+Example: 172.217.10.46 (Google’s server IP).
+Private IP:
+Used within a private network (home, office, LAN).
+Not routable over the internet.
+Example: 192.168.1.10 (your laptop or phone).
+2. Private IP Address Ranges (RFC 1918)
+Range	                        Subnet Mask	Notes
+10.0.0.0 – 10.255.255.255	255.0.0.0	Large private networks
+172.16.0.0 – 172.31.255.255	255.240.0.0	Medium private networks
+192.168.0.0 – 192.168.255.255	255.255.0.0	Common for home networks
+Public IP vs Private Network Access
+Your public IP is what the internet sees — for example, 103.45.23.10.
+Your private network (home Wi-Fi, office LAN) has devices like 192.168.1.5 or 192.168.1.10 behind your router.
+
+Even if someone knows your public IP:
+
+They can try to connect to your network, but most home routers have firewalls that block unsolicited incoming connections.
+They cannot directly see your private IP addresses or access devices inside your LAN.

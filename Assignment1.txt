@@ -1,0 +1,73 @@
+1. Physical Layer
+
+Explanation: This is the layer that deals with the actual hardware and transmission media. It includes Wi-Fi, mobile networks (4G/5G), fiber optics, cables, and signals.
+
+Telegram Example: When you send a message, it travels through your phone’s Wi-Fi or mobile network to reach Telegram servers.
+
+Attack Example:
+
+Device theft: Someone steals your phone and accesses Telegram.
+Signal jamming: Disrupting Wi-Fi or mobile data to stop message delivery.
+2. Data Link Layer
+
+Explanation: This layer converts data into frames and ensures reliable delivery over the physical medium. It also manages addressing via MAC addresses.
+
+Telegram Example: Your message is packaged into frames and sent over Wi-Fi or mobile data to your router, then to the internet.
+
+Attack Example:
+
+Wi-Fi sniffing: Hackers intercept frames on public Wi-Fi to gather information.
+MAC spoofing: Pretending to be your device to intercept or manipulate traffic.
+3. Network Layer
+
+Explanation: Responsible for routing data between devices using IP addresses. Ensures that the message finds the correct destination over the internet.
+
+Telegram Example: Telegram servers use IP addresses to route messages between your phone and your friend’s phone.
+
+Attack Example:
+
+IP spoofing: Hacker pretends to be a Telegram server to intercept messages.
+Routing attacks: Blocking or redirecting Telegram traffic (e.g., in censorship).
+4. Transport Layer
+
+Explanation: Ensures end-to-end delivery, reliability, and proper sequencing. Uses TCP for reliable delivery and UDP for faster connections like calls.
+
+Telegram Example:
+
+Text messages use TCP to make sure nothing is lost.
+Voice/video calls use UDP for fast delivery, even if some packets are lost.
+
+Attack Example:
+
+Flooding/DDoS: Overloading Telegram’s servers to disrupt calls or messages.
+Session hijacking: Taking over the transport session to intercept messages.
+5. Session Layer
+
+Explanation: Manages sessions or conversations between your device and Telegram servers. Handles authentication and keeps connections alive.
+
+Telegram Example: When you stay logged in, Telegram maintains a session so you don’t have to log in again.
+
+Attack Example:
+
+Session hijacking: Stealing session tokens to impersonate the user.
+Replay attacks: Resending captured session data to access accounts.
+6. Presentation Layer
+
+Explanation: Handles encryption, decryption, and data formatting. Ensures that the message is readable only by the intended recipient.
+
+Telegram Example: Telegram uses MTProto encryption to secure messages. In secret chats, end-to-end encryption ensures only you and the receiver can read messages.
+
+Attack Example:
+
+Cryptanalysis: Trying to break the encryption to read messages.
+Downgrade attacks: Forcing weaker encryption to access data.
+7. Application Layer
+
+Explanation: This is the user-facing layer where the application interacts with the user. Includes message sending, reading, calls, and bots.
+
+Telegram Example: The Telegram app itself, where you type messages, send files, make calls, and interact with bots.
+
+Attack Example:
+
+Phishing attacks: Fake Telegram messages or links to steal credentials.
+Malware via bots: Malicious bots sending infected files or links.

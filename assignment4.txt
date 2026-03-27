@@ -1,0 +1,37 @@
+1. What is Subnetting?
+
+Subnetting is the process of dividing a larger network into smaller networks (subnets).
+
+It helps organize networks, improve security, and reduce traffic.
+Each subnet has its own range of IP addresses.
+
+Example:
+
+Big network: 192.168.0.0/24 → 256 addresses.
+Subnetted into 4 smaller networks:
+192.168.0.0/26 → 64 addresses
+192.168.0.64/26 → 64 addresses
+192.168.0.128/26 → 64 addresses
+192.168.0.192/26 → 64 addresses
+2. CIDR Notation (/8, /16, /24, /64)
+
+CIDR (Classless Inter-Domain Routing) notation tells how many bits are used for the network part of the IP.
+
+/8 → First 8 bits = network, remaining 24 bits = host addresses.
+IPv4 Example: 10.0.0.0/8 → 16,777,216 addresses.
+/16 → First 16 bits = network, remaining 16 bits = hosts.
+IPv4 Example: 172.16.0.0/16 → 65,536 addresses.
+/24 → First 24 bits = network, remaining 8 bits = hosts.
+IPv4 Example: 192.168.1.0/24 → 256 addresses.
+/64 → Mostly used in IPv6.
+First 64 bits = network, last 64 bits = hosts.
+IPv6 Example: 2001:0db8::/64 → ~18 quintillion addresses.
+3. Maximum and Minimum Subnetting (Limits)
+IPv4:
+Minimum subnet size: /30 → 4 IP addresses (2 usable for hosts, 1 network, 1 broadcast)
+Maximum subnet size: /8 → Very large network (~16 million hosts)
+Smallest usable subnet: /32 → Single host (often used for routing, firewall rules)
+IPv6:
+Typical subnet size: /64 → Standard for most networks
+Smallest subnet: /128 → Single host
+Largest subnet: /0 → Covers the entire IPv6 address space

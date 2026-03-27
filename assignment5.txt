@@ -1,0 +1,21 @@
+2. Class D IP Addresses (224–239)
+Purpose: Multicast
+Used to send packets to a group of devices at once, instead of one-to-one.
+Example: Streaming a live video to multiple clients.
+Not used for regular hosts.
+Structure:
+First 4 bits: 1110
+Remaining 28 bits: define multicast group
+Example addresses:
+224.0.0.1 → All hosts on the local network
+233.1.2.3 → Specific multicast group
+3. Class E IP Addresses (240–255)
+Purpose: Experimental / Future use
+Reserved for research, testing, or future use.
+Not assigned to hosts or networks on the internet.
+Structure:
+First 4 bits: 1111
+Example addresses:
+240.0.0.1, 255.255.255.255
+Note:
+255.255.255.255 is technically a broadcast address, used for network-wide messages.
